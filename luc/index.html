@@ -18,12 +18,15 @@
     <div class="container hero__content">
       <h1>Votre chauffagiste de confiance</h1>
       <p>Installation • Dépannage • Entretien chaudière & systèmes de chauffage</p>
+
       <div class="cta">
         <a class="btn btn--primary" href="#demande">Demander une intervention</a>
         <a class="btn btn--secondary" href="#rdv">Réserver un créneau</a>
       </div>
-      <p class="hint" style="margin-top:1rem;">
-        Urgence ? Appelez : <a href="tel:+32400000000" style="color:#fff;text-decoration:underline;">+32 400 00 000</a>
+
+      <p class="hint hero__hint">
+        Urgence ? Appelez :
+        <a class="hero__phone" href="tel:+32400000000">+32 400 00 000</a>
       </p>
     </div>
   </header>
@@ -32,15 +35,18 @@
     <!-- SERVICES -->
     <section id="services" class="services container">
       <h2>Nos services</h2>
+
       <div class="grid">
         <article class="card">
           <h3>Installation</h3>
           <p>Chaudières gaz, pompes à chaleur, radiateurs, planchers chauffants, régulation.</p>
         </article>
+
         <article class="card">
           <h3>Dépannage</h3>
           <p>Intervention rapide sur pannes, fuites, circulateurs, brûleurs, thermostats.</p>
         </article>
+
         <article class="card">
           <h3>Entretien</h3>
           <p>Entretien annuel, réglages, désembouage, optimisation énergétique.</p>
@@ -48,10 +54,12 @@
       </div>
     </section>
 
-    <!-- FORM UNIQUE : DEMANDE D’INTERVENTION -->
+    <!-- DEMANDE (FORM UNIQUE) -->
     <section id="demande" class="diagnostic container">
-      <h2>Demande d’intervention</h2>
-      <p>Une seule demande, claire et complète. Nous vous recontactons rapidement avec la meilleure option (urgence / devis / rendez-vous).</p>
+      <h2>Demande d’intervention (2 minutes)</h2>
+      <p class="section-lead">
+        Une seule demande, claire et complète. Nous vous recontactons rapidement avec la meilleure option (urgence / devis / rendez-vous).
+      </p>
 
       <form id="diagForm" class="diag__form">
         <div class="row">
@@ -109,7 +117,7 @@
 
         <div class="cta">
           <button class="btn btn--primary" type="submit">Envoyer la demande</button>
-          <a class="btn btn--secondary" href="#rdv">Ou réserver un créneau</a>
+          <a class="btn btn--secondary btn--dark" href="#rdv">Ou réserver un créneau</a>
         </div>
 
         <p id="diagStatus" class="hint" aria-live="polite"></p>
@@ -119,26 +127,40 @@
     <!-- RDV -->
     <section id="rdv" class="booking container">
       <h2>Prise de rendez-vous</h2>
-      <p>Si ce n’est pas urgent, vous pouvez réserver un créneau directement. Nous confirmons sous 24h.</p>
-      <a class="btn btn--primary" href="https://calendly.com/" target="_blank" rel="noopener">Réserver un créneau</a>
-      <p class="hint">Ou appelez : <a href="tel:+32400000000">+32 400 00 000</a></p>
+      <p class="section-lead">Si ce n’est pas urgent, vous pouvez réserver un créneau directement. Nous confirmons sous 24h.</p>
+
+      <div class="cta">
+        <a class="btn btn--primary" href="https://calendly.com/" target="_blank" rel="noopener">Réserver un créneau</a>
+      </div>
+
+      <p class="hint" style="text-align:center;margin-top:1rem;">
+        Ou appelez : <a href="tel:+32400000000">+32 400 00 000</a>
+      </p>
     </section>
 
-    <!-- CONTACT (INFOS UNIQUEMENT, PAS DE FORM) -->
+    <!-- CONTACT (INFOS UNIQUEMENT) -->
     <section id="contact" class="contact container">
       <h2>Contact</h2>
+
       <div class="contact__grid">
-        <div class="contact__info" style="grid-column: 1 / -1;">
+        <div class="contact__info">
           <ul>
             <li><strong>Zone d'intervention :</strong> Namur et environs</li>
             <li><strong>Téléphone :</strong> <a href="tel:+32400000000">+32 400 00 000</a></li>
             <li><strong>E-mail :</strong> <a href="mailto:contact@example.com">contact@example.com</a></li>
           </ul>
+
           <div class="badges">
             <span class="badge">Intervention 24/7</span>
             <span class="badge">Certifié</span>
             <span class="badge">Devis gratuit</span>
           </div>
+        </div>
+
+        <div class="contact__card">
+          <h3>Besoin d’une réponse rapide ?</h3>
+          <p>Pour les urgences, le téléphone reste le plus efficace.</p>
+          <a class="btn btn--primary" href="tel:+32400000000">Appeler maintenant</a>
         </div>
       </div>
     </section>
