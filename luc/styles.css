@@ -433,4 +433,73 @@ main section{
 .contact .contact__card-cta{
   display:none !important;
 }
+/* ===== Contact : 2 boxes symétriques ===== */
+
+.contact h2{
+  text-align:center;
+}
+
+.contact__grid2{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  align-items: stretch;
+  margin-top: 1.25rem;
+}
+
+.contact__box{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:1rem;
+  padding:1.25rem;
+  box-shadow:0 6px 20px rgba(2,6,23,.04);
+}
+
+.contact__box h3{
+  margin:0 0 .75rem;
+  font-size:1.1rem;
+}
+
+.contact__box p{
+  margin:.25rem 0 1rem;
+  color: var(--muted);
+}
+
+.contact__list{
+  list-style:none;
+  padding:0;
+  margin:0 0 1rem;
+}
+
+.contact__list li{
+  margin:0 0 .5rem;
+  color: var(--muted);
+}
+
+.contact__list a{
+  color: var(--text);
+  text-decoration: underline;
+}
+
+/* Box CTA : mettre le bouton en avant */
+.contact__box--cta{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.contact__box--cta .btn{
+  width: fit-content;
+}
+
+/* Mobile : stacking */
+@media (max-width: 860px){
+  .contact__grid2{
+    grid-template-columns: 1fr;
+  }
+  .contact__box--cta .btn{
+    width: 100%;
+    text-align:center;
+  }
+}
 
