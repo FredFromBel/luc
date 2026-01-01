@@ -17,20 +17,21 @@
   <header class="hero">
     <div class="hero__overlay" aria-hidden="true"></div>
 
-    <div class="container hero__content">
-      <p class="hero__kicker">Installation • Dépannage • Entretien chaudière & systèmes de chauffage</p>
-      <h1>Votre chauffagiste de confiance</h1>
-      <p class="hero__lead">Intervention rapide, travail soigné, devis clair. Zone : Namur et environs.</p>
+    <div class="container">
+      <div class="hero__content">
+        <p class="hero__kicker">Installation • Dépannage • Entretien chaudière & systèmes de chauffage</p>
+        <h1>Votre chauffagiste de confiance</h1>
+        <p class="hero__lead">Intervention rapide, travail soigné, devis clair. Zone : Namur et environs.</p>
 
-      <div class="hero__cta">
-        <a class="btn btn--primary" href="#demande">Demander une intervention</a>
-        <a class="btn btn--ghost" href="#rdv">Réserver un créneau</a>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#demande">Demander une intervention</a>
+          <a class="btn btn--ghost" href="#contact">Réserver / Contact</a>
+        </div>
+
+        <p class="hero__urgent">
+          Urgence ? <a href="tel:+32400000000">Appelez : +32 400 00 000</a>
+        </p>
       </div>
-
-      <p class="hero__urgent">
-        Urgence ?
-        <a href="tel:+32400000000">Appelez : +32 400 00 000</a>
-      </p>
     </div>
   </header>
 
@@ -38,26 +39,28 @@
     <!-- SERVICES -->
     <section id="services" class="section">
       <div class="container">
-        <header class="section__head">
-          <h2>Nos services</h2>
-          <p>Un interlocuteur unique, du diagnostic à la mise en service.</p>
-        </header>
+        <div class="content">
+          <header class="section__head">
+            <h2>Nos services</h2>
+            <p>Un interlocuteur unique, du diagnostic à la mise en service.</p>
+          </header>
 
-        <div class="cards">
-          <article class="card">
-            <h3>Installation</h3>
-            <p>Chaudières gaz, pompes à chaleur, radiateurs, planchers chauffants, régulation.</p>
-          </article>
+          <div class="cards">
+            <article class="card">
+              <h3>Installation</h3>
+              <p>Chaudières gaz, pompes à chaleur, radiateurs, planchers chauffants, régulation.</p>
+            </article>
 
-          <article class="card">
-            <h3>Dépannage</h3>
-            <p>Intervention sur pannes, fuites, circulateurs, brûleurs, thermostats.</p>
-          </article>
+            <article class="card">
+              <h3>Dépannage</h3>
+              <p>Intervention sur pannes, fuites, circulateurs, brûleurs, thermostats.</p>
+            </article>
 
-          <article class="card">
-            <h3>Entretien</h3>
-            <p>Entretien annuel, réglages, désembouage, optimisation énergétique.</p>
-          </article>
+            <article class="card">
+              <h3>Entretien</h3>
+              <p>Entretien annuel, réglages, désembouage, optimisation énergétique.</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -65,131 +68,121 @@
     <!-- DEMANDE (FORM UNIQUE) -->
     <section id="demande" class="section section--soft">
       <div class="container">
-        <header class="section__head section__head--center">
-          <h2>Demande d’intervention (2 minutes)</h2>
-          <p>Une seule demande, claire et complète. Nous vous recontactons rapidement avec la meilleure option.</p>
-        </header>
+        <div class="content">
+          <header class="section__head section__head--center">
+            <h2>Demande d’intervention (2 minutes)</h2>
+            <p>Une seule demande, claire et complète. Nous vous recontactons rapidement avec la meilleure option.</p>
+          </header>
 
-        <div class="panel">
-          <form id="leadForm" class="form" novalidate>
-            <div class="form__grid">
-              <div class="field">
-                <label for="type">Type d’intervention</label>
-                <select id="type" name="type" required>
-                  <option value="">Choisir…</option>
-                  <option value="depannage">Dépannage</option>
-                  <option value="entretien">Entretien</option>
-                  <option value="installation">Installation / remplacement</option>
-                </select>
+          <div class="panel">
+            <form id="leadForm" class="form" novalidate>
+              <div class="form__grid">
+                <div class="field">
+                  <label for="type">Type d’intervention</label>
+                  <select id="type" name="type" required>
+                    <option value="">Choisir…</option>
+                    <option value="depannage">Dépannage</option>
+                    <option value="entretien">Entretien</option>
+                    <option value="installation">Installation / remplacement</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="systeme">Énergie / système</label>
+                  <select id="systeme" name="systeme" required>
+                    <option value="">Choisir…</option>
+                    <option value="gaz">Chaudière gaz</option>
+                    <option value="mazout">Chaudière mazout</option>
+                    <option value="pac">Pompe à chaleur</option>
+                    <option value="autre">Autre</option>
+                  </select>
+                </div>
+
+                <div class="field field--full" id="urgRow" hidden>
+                  <label for="urgence">Urgence</label>
+                  <select id="urgence" name="urgence">
+                    <option value="pas_urgent">Pas urgent</option>
+                    <option value="chauffage_ko">Plus de chauffage</option>
+                    <option value="eau_chaude_ko">Plus d’eau chaude</option>
+                    <option value="fuite">Fuite</option>
+                    <option value="odeur_gaz">Odeur de gaz</option>
+                  </select>
+                  <p class="hint">Si odeur de gaz : coupez l’arrivée et contactez immédiatement les urgences gaz.</p>
+                </div>
+
+                <div class="field">
+                  <label for="cp">Code postal</label>
+                  <input id="cp" name="cp" type="text" inputmode="numeric" placeholder="5000" required />
+                </div>
+
+                <div class="field">
+                  <label for="tel">Téléphone</label>
+                  <input id="tel" name="tel" type="tel" placeholder="+32 ..." required />
+                </div>
+
+                <div class="field field--full">
+                  <label for="email">E-mail</label>
+                  <input id="email" name="email" type="email" placeholder="nom@domaine.com" required />
+                </div>
+
+                <div class="field field--full">
+                  <label for="details">Détails</label>
+                  <textarea id="details" name="details" rows="5" placeholder="Symptômes, marque/modèle si connu, messages d’erreur…" required></textarea>
+                </div>
               </div>
 
-              <div class="field">
-                <label for="systeme">Énergie / système</label>
-                <select id="systeme" name="systeme" required>
-                  <option value="">Choisir…</option>
-                  <option value="gaz">Chaudière gaz</option>
-                  <option value="mazout">Chaudière mazout</option>
-                  <option value="pac">Pompe à chaleur</option>
-                  <option value="autre">Autre</option>
-                </select>
+              <div class="form__actions">
+                <button class="btn btn--primary" type="submit">Envoyer la demande</button>
+                <span id="formStatus" class="status" aria-live="polite"></span>
               </div>
-
-              <div class="field field--full" id="urgRow" hidden>
-                <label for="urgence">Urgence</label>
-                <select id="urgence" name="urgence">
-                  <option value="pas_urgent">Pas urgent</option>
-                  <option value="chauffage_ko">Plus de chauffage</option>
-                  <option value="eau_chaude_ko">Plus d’eau chaude</option>
-                  <option value="fuite">Fuite</option>
-                  <option value="odeur_gaz">Odeur de gaz</option>
-                </select>
-                <p class="hint">Si odeur de gaz : coupez l’arrivée et contactez immédiatement les urgences gaz.</p>
-              </div>
-
-              <div class="field">
-                <label for="cp">Code postal</label>
-                <input id="cp" name="cp" type="text" inputmode="numeric" placeholder="5000" required />
-              </div>
-
-              <div class="field">
-                <label for="tel">Téléphone</label>
-                <input id="tel" name="tel" type="tel" placeholder="+32 ..." required />
-              </div>
-
-              <div class="field field--full">
-                <label for="email">E-mail</label>
-                <input id="email" name="email" type="email" placeholder="nom@domaine.com" required />
-              </div>
-
-              <div class="field field--full">
-                <label for="details">Détails</label>
-                <textarea id="details" name="details" rows="5" placeholder="Symptômes, marque/modèle si connu, messages d’erreur…" required></textarea>
-              </div>
-            </div>
-
-            <div class="form__actions">
-              <button class="btn btn--primary" type="submit">Envoyer la demande</button>
-              <span id="formStatus" class="status" aria-live="polite"></span>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- RDV (2 BOXES) -->
-    <section id="rdv" class="section">
-      <div class="container">
-        <header class="section__head section__head--center">
-          <h2>Prise de rendez-vous</h2>
-          <p>Si ce n’est pas urgent, réservez un créneau. Pour une urgence, le téléphone reste le plus efficace.</p>
-        </header>
-
-        <div class="twobox">
-          <div class="box">
-            <h3>Réserver un créneau</h3>
-            <p>Choisissez un créneau disponible. Confirmation sous 24h.</p>
-            <a class="btn btn--primary" href="https://calendly.com/" target="_blank" rel="noopener">Réserver un créneau</a>
-          </div>
-
-          <div class="box box--alt">
-            <h3>Urgence / dépannage rapide</h3>
-            <p>Appelez directement pour une intervention urgente.</p>
-            <a class="btn btn--dark" href="tel:+32400000000">Appeler : +32 400 00 000</a>
-            <p class="hint">Si odeur de gaz : coupez l’arrivée et contactez les urgences gaz.</p>
+            </form>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT (2 BOXES) -->
+    <!-- BLOC COHÉRENT : RDV + URGENCE + CONTACT (UN SEUL ENSEMBLE) -->
     <section id="contact" class="section">
       <div class="container">
-        <header class="section__head section__head--center">
-          <h2>Contact</h2>
-          <p>Coordonnées et zone d’intervention.</p>
-        </header>
+        <div class="content">
+          <header class="section__head section__head--center">
+            <h2>Rendez-vous & contact</h2>
+            <p>Un seul bloc clair : réserver si ce n’est pas urgent, appeler si c’est urgent, puis les coordonnées.</p>
+          </header>
 
-        <div class="twobox">
-          <div class="box">
-            <h3>Coordonnées</h3>
-            <ul class="list">
-              <li><strong>Zone :</strong> Namur et environs</li>
-              <li><strong>Téléphone :</strong> <a href="tel:+32400000000">+32 400 00 000</a></li>
-              <li><strong>E-mail :</strong> <a href="mailto:contact@example.com">contact@example.com</a></li>
-            </ul>
-            <div class="badges">
-              <span class="badge">Intervention 24/7</span>
-              <span class="badge">Certifié</span>
-              <span class="badge">Devis gratuit</span>
+          <div class="hub">
+            <!-- Rangée 1 : RDV + Urgence (2 zones, même bloc) -->
+            <div class="hub__top">
+              <div class="hub__pane">
+                <h3>Réserver un créneau</h3>
+                <p>Choisissez un créneau disponible. Confirmation sous 24h.</p>
+                <a class="btn btn--primary" href="https://calendly.com/" target="_blank" rel="noopener">Réserver un créneau</a>
+              </div>
+
+              <div class="hub__pane hub__pane--tint">
+                <h3>Urgence / dépannage rapide</h3>
+                <p>Pour une intervention urgente, le téléphone reste le plus efficace.</p>
+                <a class="btn btn--dark" href="tel:+32400000000">Appeler : +32 400 00 000</a>
+                <p class="hint">Si odeur de gaz : coupez l’arrivée et contactez les urgences gaz.</p>
+              </div>
+            </div>
+
+            <!-- Rangée 2 : Coordonnées (1 zone pleine largeur) -->
+            <div class="hub__bottom" aria-label="Coordonnées">
+              <div class="hub__line">
+                <div><strong>Zone :</strong> Namur et environs</div>
+                <div><strong>Téléphone :</strong> <a href="tel:+32400000000">+32 400 00 000</a></div>
+                <div><strong>E-mail :</strong> <a href="mailto:contact@example.com">contact@example.com</a></div>
+              </div>
+
+              <div class="badges">
+                <span class="badge">Intervention 24/7</span>
+                <span class="badge">Certifié</span>
+                <span class="badge">Devis gratuit</span>
+              </div>
             </div>
           </div>
 
-          <div class="box box--alt">
-            <h3>Horaires & disponibilité</h3>
-            <p>Réponse rapide en journée. En cas d’urgence, privilégiez le téléphone.</p>
-            <a class="btn btn--primary" href="tel:+32400000000">Appeler maintenant</a>
-            <p class="hint">Vous pouvez aussi réserver un créneau si ce n’est pas urgent.</p>
-          </div>
         </div>
       </div>
     </section>
@@ -202,8 +195,7 @@
       <nav class="footer__nav" aria-label="Navigation">
         <a href="#services">Services</a>
         <a href="#demande">Demande</a>
-        <a href="#rdv">Rendez-vous</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Rendez-vous & contact</a>
       </nav>
     </div>
   </footer>
@@ -231,7 +223,6 @@
         e.preventDefault();
         statusEl.textContent = "Envoi en cours…";
 
-        // Validation simple native
         if (!form.checkValidity()) {
           statusEl.textContent = "Veuillez compléter les champs requis.";
           return;
