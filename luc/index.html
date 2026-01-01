@@ -1,10 +1,11 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chauffagiste – Installation & Entretien</title>
-  <meta name="description" content="Chauffagiste : installation, dépannage et entretien chaudière. Intervention rapide et demande d’intervention en ligne." />
+  <title>Chauffagiste – Installation, Dépannage & Entretien</title>
+  <meta name="description" content="Chauffagiste : installation, dépannage et entretien chaudière. Demande d’intervention en ligne et prise de rendez-vous." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,168 +15,191 @@
 <body>
   <!-- HERO -->
   <header class="hero">
-    <div class="hero__overlay"></div>
-    <div class="container hero__content">
-      <h1>Votre chauffagiste de confiance</h1>
-      <p>Installation • Dépannage • Entretien chaudière & systèmes de chauffage</p>
+    <div class="hero__overlay" aria-hidden="true"></div>
 
-     <div class="cta">
-  <button class="btn btn--primary" type="submit">Envoyer la demande</button>
+    <div class="container hero__content">
+      <p class="hero__kicker">Installation • Dépannage • Entretien chaudière & systèmes de chauffage</p>
+      <h1>Votre chauffagiste de confiance</h1>
+      <p class="hero__lead">Intervention rapide, travail soigné, devis clair. Zone : Namur et environs.</p>
+
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#demande">Demander une intervention</a>
+        <a class="btn btn--ghost" href="#rdv">Réserver un créneau</a>
       </div>
 
-
-      <p class="hint hero__hint">
-        Urgence ? Appelez :
-        <a class="hero__phone" href="tel:+32400000000">+32 400 00 000</a>
+      <p class="hero__urgent">
+        Urgence ?
+        <a href="tel:+32400000000">Appelez : +32 400 00 000</a>
       </p>
     </div>
   </header>
 
   <main>
     <!-- SERVICES -->
-    <section id="services" class="services container">
-      <h2>Nos services</h2>
+    <section id="services" class="section">
+      <div class="container">
+        <header class="section__head">
+          <h2>Nos services</h2>
+          <p>Un interlocuteur unique, du diagnostic à la mise en service.</p>
+        </header>
 
-      <div class="grid">
-        <article class="card">
-          <h3>Installation</h3>
-          <p>Chaudières gaz, pompes à chaleur, radiateurs, planchers chauffants, régulation.</p>
-        </article>
+        <div class="cards">
+          <article class="card">
+            <h3>Installation</h3>
+            <p>Chaudières gaz, pompes à chaleur, radiateurs, planchers chauffants, régulation.</p>
+          </article>
 
-        <article class="card">
-          <h3>Dépannage</h3>
-          <p>Intervention rapide sur pannes, fuites, circulateurs, brûleurs, thermostats.</p>
-        </article>
+          <article class="card">
+            <h3>Dépannage</h3>
+            <p>Intervention sur pannes, fuites, circulateurs, brûleurs, thermostats.</p>
+          </article>
 
-        <article class="card">
-          <h3>Entretien</h3>
-          <p>Entretien annuel, réglages, désembouage, optimisation énergétique.</p>
-        </article>
+          <article class="card">
+            <h3>Entretien</h3>
+            <p>Entretien annuel, réglages, désembouage, optimisation énergétique.</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- DEMANDE (FORM UNIQUE) -->
-    <section id="demande" class="diagnostic container">
-      <h2>Demande d’intervention</h2>
-      <p class="section-lead">
-        Une seule demande, claire et complète. Nous vous recontactons rapidement avec la meilleure option (urgence / devis / rendez-vous).
-      </p>
+    <section id="demande" class="section section--soft">
+      <div class="container">
+        <header class="section__head section__head--center">
+          <h2>Demande d’intervention (2 minutes)</h2>
+          <p>Une seule demande, claire et complète. Nous vous recontactons rapidement avec la meilleure option.</p>
+        </header>
 
-      <form id="diagForm" class="diag__form">
-        <div class="row">
-          <label for="type">Type d’intervention</label>
-          <select id="type" name="type" required>
-            <option value="">Choisir…</option>
-            <option value="depannage">Dépannage</option>
-            <option value="entretien">Entretien</option>
-            <option value="installation">Installation / remplacement</option>
-          </select>
+        <div class="panel">
+          <form id="leadForm" class="form" novalidate>
+            <div class="form__grid">
+              <div class="field">
+                <label for="type">Type d’intervention</label>
+                <select id="type" name="type" required>
+                  <option value="">Choisir…</option>
+                  <option value="depannage">Dépannage</option>
+                  <option value="entretien">Entretien</option>
+                  <option value="installation">Installation / remplacement</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="systeme">Énergie / système</label>
+                <select id="systeme" name="systeme" required>
+                  <option value="">Choisir…</option>
+                  <option value="gaz">Chaudière gaz</option>
+                  <option value="mazout">Chaudière mazout</option>
+                  <option value="pac">Pompe à chaleur</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+
+              <div class="field field--full" id="urgRow" hidden>
+                <label for="urgence">Urgence</label>
+                <select id="urgence" name="urgence">
+                  <option value="pas_urgent">Pas urgent</option>
+                  <option value="chauffage_ko">Plus de chauffage</option>
+                  <option value="eau_chaude_ko">Plus d’eau chaude</option>
+                  <option value="fuite">Fuite</option>
+                  <option value="odeur_gaz">Odeur de gaz</option>
+                </select>
+                <p class="hint">Si odeur de gaz : coupez l’arrivée et contactez immédiatement les urgences gaz.</p>
+              </div>
+
+              <div class="field">
+                <label for="cp">Code postal</label>
+                <input id="cp" name="cp" type="text" inputmode="numeric" placeholder="5000" required />
+              </div>
+
+              <div class="field">
+                <label for="tel">Téléphone</label>
+                <input id="tel" name="tel" type="tel" placeholder="+32 ..." required />
+              </div>
+
+              <div class="field field--full">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" placeholder="nom@domaine.com" required />
+              </div>
+
+              <div class="field field--full">
+                <label for="details">Détails</label>
+                <textarea id="details" name="details" rows="5" placeholder="Symptômes, marque/modèle si connu, messages d’erreur…" required></textarea>
+              </div>
+            </div>
+
+            <div class="form__actions">
+              <button class="btn btn--primary" type="submit">Envoyer la demande</button>
+              <span id="formStatus" class="status" aria-live="polite"></span>
+            </div>
+          </form>
         </div>
-
-        <div class="row">
-          <label for="systeme">Énergie / système</label>
-          <select id="systeme" name="systeme" required>
-            <option value="">Choisir…</option>
-            <option value="gaz">Chaudière gaz</option>
-            <option value="mazout">Chaudière mazout</option>
-            <option value="pac">Pompe à chaleur</option>
-            <option value="autre">Autre</option>
-          </select>
-        </div>
-
-        <div class="row" id="urgRow" style="display:none;">
-          <label for="urgence">Urgence</label>
-          <select id="urgence" name="urgence">
-            <option value="pas_urgent">Pas urgent</option>
-            <option value="chauffage_ko">Plus de chauffage</option>
-            <option value="eau_chaude_ko">Plus d’eau chaude</option>
-            <option value="fuite">Fuite</option>
-            <option value="odeur_gaz">Odeur de gaz</option>
-          </select>
-          <p class="hint">Si odeur de gaz : coupez l’arrivée et appelez immédiatement les urgences gaz.</p>
-        </div>
-
-        <div class="row">
-          <label for="cp">Code postal</label>
-          <input id="cp" name="cp" type="text" inputmode="numeric" placeholder="5000" required />
-        </div>
-
-        <div class="row">
-          <label for="tel">Téléphone</label>
-          <input id="tel" name="tel" type="tel" placeholder="+32 ..." required />
-        </div>
-
-        <div class="row">
-          <label for="email">E-mail</label>
-          <input id="email" name="email" type="email" placeholder="nom@domaine.com" required />
-        </div>
-
-        <div class="row">
-          <label for="details">Détails</label>
-          <textarea id="details" name="details" rows="4" placeholder="Symptômes, marque/modèle si connu, messages d’erreur…" required></textarea>
-        </div>
-
-        <div class="cta">
-          <button class="btn btn--primary" type="submit">Envoyer la demande</button>
-          <a class="btn btn--secondary btn--dark" href="#rdv">Ou réserver un créneau</a>
-        </div>
-
-        <p id="diagStatus" class="hint" aria-live="polite"></p>
-      </form>
+      </div>
     </section>
 
-    <!-- RDV -->
-    <section id="rdv" class="booking container">
-      <h2>Prise de rendez-vous</h2>
-      <p class="section-lead">Si ce n’est pas urgent, vous pouvez réserver un créneau directement. Nous confirmons sous 24h.</p>
+    <!-- RDV (2 BOXES) -->
+    <section id="rdv" class="section">
+      <div class="container">
+        <header class="section__head section__head--center">
+          <h2>Prise de rendez-vous</h2>
+          <p>Si ce n’est pas urgent, réservez un créneau. Pour une urgence, le téléphone reste le plus efficace.</p>
+        </header>
 
-      <div class="cta">
-        <a class="btn btn--primary" href="https://calendly.com/" target="_blank" rel="noopener">Réserver un créneau</a>
+        <div class="twobox">
+          <div class="box">
+            <h3>Réserver un créneau</h3>
+            <p>Choisissez un créneau disponible. Confirmation sous 24h.</p>
+            <a class="btn btn--primary" href="https://calendly.com/" target="_blank" rel="noopener">Réserver un créneau</a>
+          </div>
+
+          <div class="box box--alt">
+            <h3>Urgence / dépannage rapide</h3>
+            <p>Appelez directement pour une intervention urgente.</p>
+            <a class="btn btn--dark" href="tel:+32400000000">Appeler : +32 400 00 000</a>
+            <p class="hint">Si odeur de gaz : coupez l’arrivée et contactez les urgences gaz.</p>
+          </div>
+        </div>
       </div>
-
-      <p class="hint" style="text-align:center;margin-top:1rem;">
-        Ou appelez : <a href="tel:+32400000000">+32 400 00 000</a>
-      </p>
     </section>
 
-    <!-- CONTACT (INFOS UNIQUEMENT) -->
-   <section id="contact" class="contact container">
-  <h2>Contact</h2>
+    <!-- CONTACT (2 BOXES) -->
+    <section id="contact" class="section">
+      <div class="container">
+        <header class="section__head section__head--center">
+          <h2>Contact</h2>
+          <p>Coordonnées et zone d’intervention.</p>
+        </header>
 
-  <div class="contact__grid2">
-    <!-- Box 1 : Infos -->
-    <div class="contact__box">
-      <h3>Coordonnées</h3>
-      <ul class="contact__list">
-        <li><strong>Zone :</strong> Namur et environs</li>
-        <li><strong>Téléphone :</strong> <a href="tel:+32400000000">+32 400 00 000</a></li>
-        <li><strong>E-mail :</strong> <a href="mailto:contact@example.com">contact@example.com</a></li>
-      </ul>
+        <div class="twobox">
+          <div class="box">
+            <h3>Coordonnées</h3>
+            <ul class="list">
+              <li><strong>Zone :</strong> Namur et environs</li>
+              <li><strong>Téléphone :</strong> <a href="tel:+32400000000">+32 400 00 000</a></li>
+              <li><strong>E-mail :</strong> <a href="mailto:contact@example.com">contact@example.com</a></li>
+            </ul>
+            <div class="badges">
+              <span class="badge">Intervention 24/7</span>
+              <span class="badge">Certifié</span>
+              <span class="badge">Devis gratuit</span>
+            </div>
+          </div>
 
-      <div class="badges">
-        <span class="badge">Intervention 24/7</span>
-        <span class="badge">Certifié</span>
-        <span class="badge">Devis gratuit</span>
+          <div class="box box--alt">
+            <h3>Horaires & disponibilité</h3>
+            <p>Réponse rapide en journée. En cas d’urgence, privilégiez le téléphone.</p>
+            <a class="btn btn--primary" href="tel:+32400000000">Appeler maintenant</a>
+            <p class="hint">Vous pouvez aussi réserver un créneau si ce n’est pas urgent.</p>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <!-- Box 2 : CTA -->
-    <div class="contact__box contact__box--cta">
-      <h3>Besoin d’une réponse rapide ?</h3>
-      <p>Pour les urgences, le téléphone reste le plus efficace.</p>
-      <a class="btn btn--primary" href="tel:+32400000000">Appeler maintenant</a>
-      <p class="hint">Si odeur de gaz : coupez l’arrivée et contactez les urgences gaz.</p>
-    </div>
-  </div>
-</section>
-
+    </section>
   </main>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
+    <div class="container footer__inner">
       <p>© 2026 Chauffagiste – Tous droits réservés.</p>
-      <nav class="footer__nav">
+      <nav class="footer__nav" aria-label="Navigation">
         <a href="#services">Services</a>
         <a href="#demande">Demande</a>
         <a href="#rdv">Rendez-vous</a>
@@ -184,39 +208,56 @@
     </div>
   </footer>
 
-  <!-- JS -->
   <script>
-    const form = document.getElementById('diagForm');
-    const typeSel = form.querySelector('select[name="type"]');
-    const urgRow = document.getElementById('urgRow');
-    const statusEl = document.getElementById('diagStatus');
+    (function () {
+      const form = document.getElementById('leadForm');
+      const typeSel = document.getElementById('type');
+      const urgRow = document.getElementById('urgRow');
+      const statusEl = document.getElementById('formStatus');
 
-    typeSel.addEventListener('change', () => {
-      urgRow.style.display = (typeSel.value === 'depannage') ? 'block' : 'none';
-    });
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      statusEl.textContent = "Envoi en cours…";
-
-      const data = Object.fromEntries(new FormData(form).entries());
-
-      try {
-        const r = await fetch('/api/lead', {
-          method: 'POST',
-          headers: {'Content-Type':'application/json'},
-          body: JSON.stringify(data)
-        });
-
-        statusEl.textContent = r.ok
-          ? "Merci. Demande envoyée. Nous vous recontactons rapidement."
-          : "Erreur d’envoi. Essayez par téléphone ou réessayez plus tard.";
-
-        if (r.ok) form.reset();
-      } catch (err) {
-        statusEl.textContent = "Erreur réseau. Essayez par téléphone ou réessayez plus tard.";
+      function toggleUrgence() {
+        const show = typeSel.value === 'depannage';
+        urgRow.hidden = !show;
+        if (!show) {
+          const urg = document.getElementById('urgence');
+          if (urg) urg.value = 'pas_urgent';
+        }
       }
-    });
+
+      typeSel.addEventListener('change', toggleUrgence);
+      toggleUrgence();
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        statusEl.textContent = "Envoi en cours…";
+
+        // Validation simple native
+        if (!form.checkValidity()) {
+          statusEl.textContent = "Veuillez compléter les champs requis.";
+          return;
+        }
+
+        const data = Object.fromEntries(new FormData(form).entries());
+
+        try {
+          const r = await fetch('/api/lead', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+
+          if (r.ok) {
+            statusEl.textContent = "Merci. Demande envoyée. Nous vous recontactons rapidement.";
+            form.reset();
+            toggleUrgence();
+          } else {
+            statusEl.textContent = "Erreur d’envoi. Essayez par téléphone ou réessayez plus tard.";
+          }
+        } catch (err) {
+          statusEl.textContent = "Erreur réseau. Essayez par téléphone ou réessayez plus tard.";
+        }
+      });
+    })();
   </script>
 </body>
 </html>
