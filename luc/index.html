@@ -156,5 +156,35 @@
       </nav>
     </div>
   </footer>
+  <script>
+  const form = document.getElementById('diagForm');
+  const typeSel = form.querySelector('select[name="type"]');
+  const urgRow = document.getElementById('urgRow');
+  const statusEl = document.getElementById('diagStatus');
+
+  typeSel.addEventListener('change', () => {
+    urgRow.style.display = (typeSel.value === 'depannage') ? 'block' : 'none';
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    statusEl.textContent = "Envoi en cours…";
+
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    // Niveau A: sans IA => envoi direct vers une API (ou un service de formulaire)
+    const r = await fetch('/api/lead', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(data)
+    });
+
+    statusEl.textContent = r.ok
+      ? "Merci. Demande envoyée. Nous vous recontactons rapidement."
+      : "Erreur d’envoi. Essayez via Contact ou par téléphone.";
+    if (r.ok) form.reset();
+  });
+</script>
+
 </body>
 </html>
