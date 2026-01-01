@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chauffagiste – Installation & Entretien</title>
+  <meta name="description" content="Chauffagiste: installation, dépannage et entretien chaudière. Intervention rapide et prise de rendez-vous en ligne." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <h1>Votre chauffagiste de confiance</h1>
+      <p>Installation • Dépannage • Entretien chaudière & systèmes de chauffage</p>
+      <div class="cta">
+        <a class="btn btn--primary" href="#rdv">Prendre rendez-vous</a>
+        <a class="btn btn--secondary" href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="services container">
+      <h2>Nos services</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Installation</h3>
+          <p>Chaudières gaz, pompes à chaleur, radiateurs, planchers chauffants, régulation.</p>
+        </article>
+        <article class="card">
+          <h3>Dépannage</h3>
+          <p>Intervention rapide sur pannes, fuites, circulateurs, brûleurs, thermostats.</p>
+        </article>
+        <article class="card">
+          <h3>Entretien</h3>
+          <p>Entretien annuel, réglages, désembouage, optimisation énergétique.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="rdv" class="booking container">
+      <h2>Prise de rendez-vous</h2>
+      <p>Choisissez un créneau et décrivez votre besoin. Nous confirmons sous 24h.</p>
+      <a class="btn btn--primary" href="https://calendly.com/" target="_blank" rel="noopener">Réserver un créneau</a>
+      <p class="hint">Tu peux aussi appeler directement: <a href="tel:+32400000000">+32 400 00 000</a></p>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2>Contact</h2>
+      <div class="contact__grid">
+        <form class="contact__form" action="mailto:contact@example.com" method="post" enctype="text/plain">
+          <label for="name">Nom</label>
+          <input id="name" name="Nom" type="text" placeholder="Votre nom" required>
+
+          <label for="email">E-mail</label>
+          <input id="email" name="Email" type="email" placeholder="nom@domaine.com" required>
+
+          <label for="phone">Téléphone</label>
+          <input id="phone" name="Téléphone" type="tel" placeholder="+32 ...">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="Message" rows="5" placeholder="Décrivez votre besoin" required></textarea>
+
+          <button class="btn btn--primary" type="submit">Envoyer</button>
+        </form>
+        <div class="contact__info">
+          <ul>
+            <li><strong>Zone d'intervention :</strong> Namur et environs</li>
+            <li><strong>Téléphone :</strong> <a href="tel:+32400000000">+32 400 00 000</a></li>
+            <li><strong>E-mail :</strong> <a href="mailto:contact@example.com">contact@example.com</a></li>
+          </ul>
+          <div class="badges">
+            <span class="badge">Intervention 24/7</span>
+            <span class="badge">Certifié</span>
+            <span class="badge">Devis gratuit</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Chauffagiste – Tous droits réservés.</p>
+      <nav class="footer__nav">
+        <a href="#services">Services</a>
+        <a href="#rdv">Rendez-vous</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
