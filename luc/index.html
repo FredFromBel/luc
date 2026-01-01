@@ -1,31 +1,36 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chauffagiste – Installation & Entretien</title>
-  <meta name="description" content="Chauffagiste: installation, dépannage et entretien chaudière. Intervention rapide et prise de rendez-vous en ligne." />
+  <meta name="description" content="Chauffagiste : installation, dépannage et entretien chaudière. Intervention rapide et demande d’intervention en ligne." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+  <!-- HERO -->
   <header class="hero">
     <div class="hero__overlay"></div>
     <div class="container hero__content">
       <h1>Votre chauffagiste de confiance</h1>
       <p>Installation • Dépannage • Entretien chaudière & systèmes de chauffage</p>
       <div class="cta">
-        <a class="btn btn--primary" href="#rdv">Prendre rendez-vous</a>
-        <a class="btn btn--secondary" href="#contact">Contact</a>
+        <a class="btn btn--primary" href="#demande">Demander une intervention</a>
+        <a class="btn btn--secondary" href="#rdv">Réserver un créneau</a>
       </div>
+      <p class="hint" style="margin-top:1rem;">
+        Urgence ? Appelez : <a href="tel:+32400000000" style="color:#fff;text-decoration:underline;">+32 400 00 000</a>
+      </p>
     </div>
   </header>
 
   <main>
-    <section class="services container">
+    <!-- SERVICES -->
+    <section id="services" class="services container">
       <h2>Nos services</h2>
       <div class="grid">
         <article class="card">
@@ -42,95 +47,88 @@
         </article>
       </div>
     </section>
-    <section id="diagnostic" class="diagnostic container">
-  <h2>Diagnostic rapide (2 minutes)</h2>
-  <p>Répondez à quelques questions. Nous vous recontactons avec une proposition claire (urgence / devis / rendez-vous).</p>
 
-  <form id="diagForm" class="diag__form">
-    <div class="row">
-      <label>Type d’intervention</label>
-      <select name="type" required>
-        <option value="">Choisir…</option>
-        <option value="depannage">Dépannage</option>
-        <option value="entretien">Entretien</option>
-        <option value="installation">Installation / remplacement</option>
-      </select>
-    </div>
+    <!-- FORM UNIQUE : DEMANDE D’INTERVENTION -->
+    <section id="demande" class="diagnostic container">
+      <h2>Demande d’intervention (2 minutes)</h2>
+      <p>Une seule demande, claire et complète. Nous vous recontactons rapidement avec la meilleure option (urgence / devis / rendez-vous).</p>
 
-    <div class="row">
-      <label>Énergie / système</label>
-      <select name="systeme" required>
-        <option value="">Choisir…</option>
-        <option value="gaz">Chaudière gaz</option>
-        <option value="mazout">Chaudière mazout</option>
-        <option value="pac">Pompe à chaleur</option>
-        <option value="autre">Autre</option>
-      </select>
-    </div>
+      <form id="diagForm" class="diag__form">
+        <div class="row">
+          <label for="type">Type d’intervention</label>
+          <select id="type" name="type" required>
+            <option value="">Choisir…</option>
+            <option value="depannage">Dépannage</option>
+            <option value="entretien">Entretien</option>
+            <option value="installation">Installation / remplacement</option>
+          </select>
+        </div>
 
-    <div class="row" id="urgRow" style="display:none;">
-      <label>Urgence</label>
-      <select name="urgence">
-        <option value="pas_urgent">Pas urgent</option>
-        <option value="chauffage_ko">Plus de chauffage</option>
-        <option value="eau_chaude_ko">Plus d’eau chaude</option>
-        <option value="fuite">Fuite</option>
-        <option value="odeur_gaz">Odeur de gaz</option>
-      </select>
-      <p class="hint">Si odeur de gaz : coupez l’arrivée et appelez immédiatement les urgences gaz.</p>
-    </div>
+        <div class="row">
+          <label for="systeme">Énergie / système</label>
+          <select id="systeme" name="systeme" required>
+            <option value="">Choisir…</option>
+            <option value="gaz">Chaudière gaz</option>
+            <option value="mazout">Chaudière mazout</option>
+            <option value="pac">Pompe à chaleur</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
 
-    <div class="row">
-      <label>Code postal</label>
-      <input name="cp" type="text" placeholder="5000" required />
-    </div>
+        <div class="row" id="urgRow" style="display:none;">
+          <label for="urgence">Urgence</label>
+          <select id="urgence" name="urgence">
+            <option value="pas_urgent">Pas urgent</option>
+            <option value="chauffage_ko">Plus de chauffage</option>
+            <option value="eau_chaude_ko">Plus d’eau chaude</option>
+            <option value="fuite">Fuite</option>
+            <option value="odeur_gaz">Odeur de gaz</option>
+          </select>
+          <p class="hint">Si odeur de gaz : coupez l’arrivée et appelez immédiatement les urgences gaz.</p>
+        </div>
 
-    <div class="row">
-      <label>Téléphone</label>
-      <input name="tel" type="tel" placeholder="+32 ..." required />
-    </div>
+        <div class="row">
+          <label for="cp">Code postal</label>
+          <input id="cp" name="cp" type="text" inputmode="numeric" placeholder="5000" required />
+        </div>
 
-    <div class="row">
-      <label>Détails</label>
-      <textarea name="details" rows="4" placeholder="Symptômes, marque/modèle si connu, messages d’erreur…" required></textarea>
-    </div>
+        <div class="row">
+          <label for="tel">Téléphone</label>
+          <input id="tel" name="tel" type="tel" placeholder="+32 ..." required />
+        </div>
 
-    <div class="cta">
-      <button class="btn btn--primary" type="submit">Envoyer</button>
-      <a class="btn btn--secondary" href="#rdv">Ou réserver un créneau</a>
-    </div>
+        <div class="row">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" placeholder="nom@domaine.com" required />
+        </div>
 
-    <p id="diagStatus" class="hint" aria-live="polite"></p>
-  </form>
-</section>
+        <div class="row">
+          <label for="details">Détails</label>
+          <textarea id="details" name="details" rows="4" placeholder="Symptômes, marque/modèle si connu, messages d’erreur…" required></textarea>
+        </div>
 
+        <div class="cta">
+          <button class="btn btn--primary" type="submit">Envoyer la demande</button>
+          <a class="btn btn--secondary" href="#rdv">Ou réserver un créneau</a>
+        </div>
 
-    <section id="rdv" class="booking container">
-      <h2>Prise de rendez-vous</h2>
-      <p>Choisissez un créneau et décrivez votre besoin. Nous confirmons sous 24h.</p>
-      <a class="btn btn--primary" href="https://calendly.com/" target="_blank" rel="noopener">Réserver un créneau</a>
-      <p class="hint">Tu peux aussi appeler directement: <a href="tel:+32400000000">+32 400 00 000</a></p>
+        <p id="diagStatus" class="hint" aria-live="polite"></p>
+      </form>
     </section>
 
+    <!-- RDV -->
+    <section id="rdv" class="booking container">
+      <h2>Prise de rendez-vous</h2>
+      <p>Si ce n’est pas urgent, vous pouvez réserver un créneau directement. Nous confirmons sous 24h.</p>
+      <a class="btn btn--primary" href="https://calendly.com/" target="_blank" rel="noopener">Réserver un créneau</a>
+      <p class="hint">Ou appelez : <a href="tel:+32400000000">+32 400 00 000</a></p>
+    </section>
+
+    <!-- CONTACT (INFOS UNIQUEMENT, PAS DE FORM) -->
     <section id="contact" class="contact container">
       <h2>Contact</h2>
       <div class="contact__grid">
-        <form class="contact__form" action="mailto:contact@example.com" method="post" enctype="text/plain">
-          <label for="name">Nom</label>
-          <input id="name" name="Nom" type="text" placeholder="Votre nom" required>
-
-          <label for="email">E-mail</label>
-          <input id="email" name="Email" type="email" placeholder="nom@domaine.com" required>
-
-          <label for="phone">Téléphone</label>
-          <input id="phone" name="Téléphone" type="tel" placeholder="+32 ...">
-
-          <label for="message">Message</label>
-          <textarea id="message" name="Message" rows="5" placeholder="Décrivez votre besoin" required></textarea>
-
-          <button class="btn btn--primary" type="submit">Envoyer</button>
-        </form>
-        <div class="contact__info">
+        <div class="contact__info" style="grid-column: 1 / -1;">
           <ul>
             <li><strong>Zone d'intervention :</strong> Namur et environs</li>
             <li><strong>Téléphone :</strong> <a href="tel:+32400000000">+32 400 00 000</a></li>
@@ -146,45 +144,52 @@
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <p>© 2026 Chauffagiste – Tous droits réservés.</p>
       <nav class="footer__nav">
         <a href="#services">Services</a>
+        <a href="#demande">Demande</a>
         <a href="#rdv">Rendez-vous</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </footer>
+
+  <!-- JS -->
   <script>
-  const form = document.getElementById('diagForm');
-  const typeSel = form.querySelector('select[name="type"]');
-  const urgRow = document.getElementById('urgRow');
-  const statusEl = document.getElementById('diagStatus');
+    const form = document.getElementById('diagForm');
+    const typeSel = form.querySelector('select[name="type"]');
+    const urgRow = document.getElementById('urgRow');
+    const statusEl = document.getElementById('diagStatus');
 
-  typeSel.addEventListener('change', () => {
-    urgRow.style.display = (typeSel.value === 'depannage') ? 'block' : 'none';
-  });
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    statusEl.textContent = "Envoi en cours…";
-
-    const data = Object.fromEntries(new FormData(form).entries());
-
-    // Niveau A: sans IA => envoi direct vers une API (ou un service de formulaire)
-    const r = await fetch('/api/lead', {
-      method: 'POST',
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify(data)
+    typeSel.addEventListener('change', () => {
+      urgRow.style.display = (typeSel.value === 'depannage') ? 'block' : 'none';
     });
 
-    statusEl.textContent = r.ok
-      ? "Merci. Demande envoyée. Nous vous recontactons rapidement."
-      : "Erreur d’envoi. Essayez via Contact ou par téléphone.";
-    if (r.ok) form.reset();
-  });
-</script>
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      statusEl.textContent = "Envoi en cours…";
 
+      const data = Object.fromEntries(new FormData(form).entries());
+
+      try {
+        const r = await fetch('/api/lead', {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify(data)
+        });
+
+        statusEl.textContent = r.ok
+          ? "Merci. Demande envoyée. Nous vous recontactons rapidement."
+          : "Erreur d’envoi. Essayez par téléphone ou réessayez plus tard.";
+
+        if (r.ok) form.reset();
+      } catch (err) {
+        statusEl.textContent = "Erreur réseau. Essayez par téléphone ou réessayez plus tard.";
+      }
+    });
+  </script>
 </body>
 </html>
