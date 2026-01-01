@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -16,65 +15,64 @@
   <!-- HERO -->
   <header class="hero">
     <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="container hero__content">
+      <p class="hero__kicker">Installation • Dépannage • Entretien chaudière & systèmes de chauffage</p>
+      <h1>Votre chauffagiste de confiance</h1>
+      <p class="hero__lead">Intervention rapide, travail soigné, devis clair. Zone : Namur et environs.</p>
 
-    <div class="container">
-      <div class="hero__content">
-        <p class="hero__kicker">Installation • Dépannage • Entretien chaudière & systèmes de chauffage</p>
-        <h1>Votre chauffagiste de confiance</h1>
-        <p class="hero__lead">Intervention rapide, travail soigné, devis clair. Zone : Namur et environs.</p>
-
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="#demande">Demander une intervention</a>
-          <a class="btn btn--ghost" href="#contact">Réserver / Contact</a>
-        </div>
-
-        <p class="hero__urgent">
-          Urgence ? <a href="tel:+32400000000">Appelez : +32 400 00 000</a>
-        </p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#demande">Demander une intervention</a>
+        <a class="btn btn--ghost" href="#rdv">Réserver / Contact</a>
       </div>
+
+      <p class="hero__urgent">
+        Urgence ? <a href="tel:+32400000000">Appelez : +32 400 00 000</a>
+      </p>
     </div>
   </header>
 
   <main>
-    <!-- SERVICES -->
+    <!-- BLOC 1 : SERVICES -->
     <section id="services" class="section">
       <div class="container">
-        <div class="content">
-          <header class="section__head">
+        <div class="block">
+          <div class="block__head">
             <h2>Nos services</h2>
             <p>Un interlocuteur unique, du diagnostic à la mise en service.</p>
-          </header>
+          </div>
 
-          <div class="cards">
-            <article class="card">
-              <h3>Installation</h3>
-              <p>Chaudières gaz, pompes à chaleur, radiateurs, planchers chauffants, régulation.</p>
-            </article>
+          <div class="block__body">
+            <div class="cards">
+              <article class="card">
+                <h3>Installation</h3>
+                <p>Chaudières gaz, pompes à chaleur, radiateurs, planchers chauffants, régulation.</p>
+              </article>
 
-            <article class="card">
-              <h3>Dépannage</h3>
-              <p>Intervention sur pannes, fuites, circulateurs, brûleurs, thermostats.</p>
-            </article>
+              <article class="card">
+                <h3>Dépannage</h3>
+                <p>Intervention sur pannes, fuites, circulateurs, brûleurs, thermostats.</p>
+              </article>
 
-            <article class="card">
-              <h3>Entretien</h3>
-              <p>Entretien annuel, réglages, désembouage, optimisation énergétique.</p>
-            </article>
+              <article class="card">
+                <h3>Entretien</h3>
+                <p>Entretien annuel, réglages, désembouage, optimisation énergétique.</p>
+              </article>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- DEMANDE (FORM UNIQUE) -->
+    <!-- BLOC 2 : DEMANDE -->
     <section id="demande" class="section section--soft">
       <div class="container">
-        <div class="content">
-          <header class="section__head section__head--center">
+        <div class="block">
+          <div class="block__head block__head--center">
             <h2>Demande d’intervention (2 minutes)</h2>
-            <p>Une seule demande, claire et complète. Nous vous recontactons rapidement avec la meilleure option.</p>
-          </header>
+            <p>Une demande claire et complète. Nous vous recontactons rapidement avec la meilleure option.</p>
+          </div>
 
-          <div class="panel">
+          <div class="block__body">
             <form id="leadForm" class="form" novalidate>
               <div class="form__grid">
                 <div class="field">
@@ -141,38 +139,40 @@
       </div>
     </section>
 
-    <!-- BLOC COHÉRENT : RDV + URGENCE + CONTACT (UN SEUL ENSEMBLE) -->
-    <section id="contact" class="section">
+    <!-- BLOC 3 : RDV + CONTACT (un seul ensemble) -->
+    <section id="rdv" class="section">
       <div class="container">
-        <div class="content">
-          <header class="section__head section__head--center">
+        <div class="block">
+          <div class="block__head block__head--center">
             <h2>Rendez-vous & contact</h2>
-            <p>Un seul bloc clair : réserver si ce n’est pas urgent, appeler si c’est urgent, puis les coordonnées.</p>
-          </header>
+            <p>Réservez si ce n’est pas urgent. Pour une urgence, le téléphone reste le plus efficace.</p>
+          </div>
 
-          <div class="hub">
-            <!-- Rangée 1 : RDV + Urgence (2 zones, même bloc) -->
-            <div class="hub__top">
-              <div class="hub__pane">
+          <div class="block__body">
+            <div class="split">
+              <div class="split__col">
                 <h3>Réserver un créneau</h3>
                 <p>Choisissez un créneau disponible. Confirmation sous 24h.</p>
-                <a class="btn btn--primary" href="https://calendly.com/" target="_blank" rel="noopener">Réserver un créneau</a>
+                <div class="split__cta">
+                  <a class="btn btn--primary btn--wide" href="https://calendly.com/" target="_blank" rel="noopener">Réserver un créneau</a>
+                </div>
               </div>
 
-              <div class="hub__pane hub__pane--tint">
+              <div class="split__col split__col--divider">
                 <h3>Urgence / dépannage rapide</h3>
-                <p>Pour une intervention urgente, le téléphone reste le plus efficace.</p>
-                <a class="btn btn--dark" href="tel:+32400000000">Appeler : +32 400 00 000</a>
+                <p>Appelez directement pour une intervention urgente.</p>
+                <div class="split__cta">
+                  <a class="btn btn--dark btn--wide" href="tel:+32400000000">Appeler : +32 400 00 000</a>
+                </div>
                 <p class="hint">Si odeur de gaz : coupez l’arrivée et contactez les urgences gaz.</p>
               </div>
             </div>
 
-            <!-- Rangée 2 : Coordonnées (1 zone pleine largeur) -->
-            <div class="hub__bottom" aria-label="Coordonnées">
-              <div class="hub__line">
-                <div><strong>Zone :</strong> Namur et environs</div>
-                <div><strong>Téléphone :</strong> <a href="tel:+32400000000">+32 400 00 000</a></div>
-                <div><strong>E-mail :</strong> <a href="mailto:contact@example.com">contact@example.com</a></div>
+            <div class="block__footer">
+              <div class="info-line">
+                <span><strong>Zone :</strong> Namur et environs</span>
+                <span><strong>Téléphone :</strong> <a href="tel:+32400000000">+32 400 00 000</a></span>
+                <span><strong>E-mail :</strong> <a href="mailto:contact@example.com">contact@example.com</a></span>
               </div>
 
               <div class="badges">
@@ -181,8 +181,8 @@
                 <span class="badge">Devis gratuit</span>
               </div>
             </div>
-          </div>
 
+          </div>
         </div>
       </div>
     </section>
@@ -195,7 +195,7 @@
       <nav class="footer__nav" aria-label="Navigation">
         <a href="#services">Services</a>
         <a href="#demande">Demande</a>
-        <a href="#contact">Rendez-vous & contact</a>
+        <a href="#rdv">Rendez-vous & contact</a>
       </nav>
     </div>
   </footer>
