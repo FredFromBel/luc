@@ -319,3 +319,43 @@ section h2{
 @media (max-width:700px){
   .footer .container{ flex-direction:column; }
 }
+/* ===== CORRECTION ESPACES / RESPIRATION ===== */
+
+/* Plus d’espace entre les grandes sections */
+main section {
+  padding: 5rem 0;
+}
+
+/* Séparation claire Services -> Demande */
+.services {
+  padding-bottom: 6rem;
+}
+.diagnostic {
+  padding-top: 6rem;
+}
+
+/* Aérer le titre et le texte explicatif */
+.diagnostic h2 {
+  margin-bottom: 1.25rem;
+}
+.diagnostic > p {
+  margin-bottom: 2.5rem;
+}
+
+/* Plus d’air entre les champs du formulaire */
+.diagnostic .row {
+  margin: 1.1rem 0;
+}
+
+/* Mettre le bouton en valeur */
+.diagnostic .cta {
+  margin-top: 2.5rem;
+}
+
+/* Mobile : un peu moins d’espace */
+@media (max-width: 700px) {
+  main section {
+    padding: 3.5rem 0;
+  }
+}
+
