@@ -42,6 +42,68 @@
         </article>
       </div>
     </section>
+    <section id="diagnostic" class="diagnostic container">
+  <h2>Diagnostic rapide (2 minutes)</h2>
+  <p>Répondez à quelques questions. Nous vous recontactons avec une proposition claire (urgence / devis / rendez-vous).</p>
+
+  <form id="diagForm" class="diag__form">
+    <div class="row">
+      <label>Type d’intervention</label>
+      <select name="type" required>
+        <option value="">Choisir…</option>
+        <option value="depannage">Dépannage</option>
+        <option value="entretien">Entretien</option>
+        <option value="installation">Installation / remplacement</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label>Énergie / système</label>
+      <select name="systeme" required>
+        <option value="">Choisir…</option>
+        <option value="gaz">Chaudière gaz</option>
+        <option value="mazout">Chaudière mazout</option>
+        <option value="pac">Pompe à chaleur</option>
+        <option value="autre">Autre</option>
+      </select>
+    </div>
+
+    <div class="row" id="urgRow" style="display:none;">
+      <label>Urgence</label>
+      <select name="urgence">
+        <option value="pas_urgent">Pas urgent</option>
+        <option value="chauffage_ko">Plus de chauffage</option>
+        <option value="eau_chaude_ko">Plus d’eau chaude</option>
+        <option value="fuite">Fuite</option>
+        <option value="odeur_gaz">Odeur de gaz</option>
+      </select>
+      <p class="hint">Si odeur de gaz : coupez l’arrivée et appelez immédiatement les urgences gaz.</p>
+    </div>
+
+    <div class="row">
+      <label>Code postal</label>
+      <input name="cp" type="text" placeholder="5000" required />
+    </div>
+
+    <div class="row">
+      <label>Téléphone</label>
+      <input name="tel" type="tel" placeholder="+32 ..." required />
+    </div>
+
+    <div class="row">
+      <label>Détails</label>
+      <textarea name="details" rows="4" placeholder="Symptômes, marque/modèle si connu, messages d’erreur…" required></textarea>
+    </div>
+
+    <div class="cta">
+      <button class="btn btn--primary" type="submit">Envoyer</button>
+      <a class="btn btn--secondary" href="#rdv">Ou réserver un créneau</a>
+    </div>
+
+    <p id="diagStatus" class="hint" aria-live="polite"></p>
+  </form>
+</section>
+
 
     <section id="rdv" class="booking container">
       <h2>Prise de rendez-vous</h2>
