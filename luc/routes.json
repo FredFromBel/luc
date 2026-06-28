@@ -1,5 +1,82 @@
-{
-  "routes": [
-    { "route": "/*", "serve": "/index.html", "statusCode": 200 }
-  ]
-}
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chauffage • Sanitaire • Climatisation • Énergies</title>
+  <meta name="description" content="Installation, entretien et dépannage chauffage, sanitaire, climatisation et énergies renouvelables.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Accueil">
+      <img src="assets/logo-transparent.png" alt="Logo chauffagiste">
+      <span>Chauffage • Sanitaire • Climatisation • Énergies</span>
+    </a>
+    <nav aria-label="Navigation principale">
+      <a href="#services">Services</a>
+      <a href="#engagements">Engagements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="call small" href="tel:+32000000000">Appeler</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-logo-line">
+          <img src="assets/logo-transparent.png" alt="Logo chauffagiste">
+          <p>Chauffage • Sanitaire • Climatisation • Énergies</p>
+        </div>
+        <h1>Le confort thermique,<br>simplement.</h1>
+        <p class="lead">Installation, entretien et dépannage pour votre habitation. Une intervention claire, soignée et adaptée à vos besoins.</p>
+        <div class="actions">
+          <a class="call" href="tel:+32000000000">☎ Appeler maintenant</a>
+          <a class="quote" href="mailto:contact@example.be?subject=Demande%20de%20devis">Demander un devis</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="section-title">
+        <p>Nos métiers</p>
+        <h2>Une prise en charge complète</h2>
+      </div>
+      <div class="cards">
+        <article class="card"><span class="icon snow">❄</span><h3>Climatisation</h3><p>Solutions discrètes pour rafraîchir et maintenir un confort optimal.</p></article>
+        <article class="card"><span class="icon fire">●</span><h3>Chauffage</h3><p>Installation, remplacement, entretien et dépannage de vos équipements.</p></article>
+        <article class="card"><span class="icon water">●</span><h3>Sanitaire</h3><p>Interventions propres et fiables pour vos installations d’eau et sanitaires.</p></article>
+        <article class="card"><span class="icon sun">☀</span><h3>Énergies</h3><p>Conseil et solutions orientées performance, économies et durabilité.</p></article>
+      </div>
+    </section>
+
+    <section id="engagements" class="section split">
+      <div>
+        <p class="eyebrow">Pourquoi nous choisir</p>
+        <h2>Un service local, clair et soigné.</h2>
+        <p>Un site carte de visite doit rassurer vite : services lisibles, contact immédiat, identité cohérente et promesse simple.</p>
+      </div>
+      <div class="checks">
+        <p>✓ Devis clair et intervention expliquée</p>
+        <p>✓ Travail propre et respect de l’habitation</p>
+        <p>✓ Dépannage, entretien et installation</p>
+        <p>✓ Contact direct par téléphone ou e-mail</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Besoin d’un renseignement ?</h2>
+        <p>Remplace simplement ces coordonnées par celles de ton ami.</p>
+      </div>
+      <div class="contact-card">
+        <a href="tel:+32000000000">+32 000 00 00 00</a>
+        <a href="mailto:contact@example.be">contact@example.be</a>
+        <span>Zone d’intervention : Brabant wallon • Namur • environs</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
