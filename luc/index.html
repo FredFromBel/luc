@@ -3,252 +3,110 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chauffagiste – Installation, Dépannage & Entretien</title>
-  <meta name="description" content="Chauffagiste : installation, dépannage et entretien chaudière. Demande d’intervention en ligne et prise de rendez-vous." />
+  <title>Chauffagiste | Chauffage, Sanitaire & Climatisation</title>
+  <meta name="description" content="Chauffagiste de confiance pour installation, entretien et dépannage chauffage, sanitaire, climatisation et énergies renouvelables." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero__overlay" aria-hidden="true"></div>
-    <div class="container hero__content">
-      <p class="hero__kicker">Installation • Dépannage • Entretien chaudière & systèmes de chauffage</p>
-      <h1>Votre chauffagiste de confiance</h1>
-      <p class="hero__lead">Intervention rapide, travail soigné, devis clair. Zone : Arlon et environs.</p>
-
-      <div class="hero__cta">
-        <a class="btn btn--primary" href="#demande">Demander une intervention</a>
-        <a class="btn btn--ghost" href="#rdv">Réserver / Contact</a>
-      </div>
-
-      <p class="hero__urgent">
-        Urgence ? <a href="tel:+32400000000">Appelez : +32 400 00 000</a>
-      </p>
-    </div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Accueil">
+      <img src="assets/logo.png" alt="Logo chauffagiste" />
+    </a>
+    <nav aria-label="Navigation principale">
+      <a href="#services">Services</a>
+      <a href="#confiance">Engagements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="header-call" href="tel:+32400000000">Appeler</a>
   </header>
 
-  <main>
-    <!-- BLOC 1 : SERVICES -->
-    <section id="services" class="section">
-      <div class="container">
-        <div class="block">
-          <div class="block__head block__head--center">
-            <h2>Nos services</h2>
-            <p>Un interlocuteur unique, du diagnostic à la mise en service.</p>
-          </div>
-
-          <div class="block__body">
-            <div class="cards">
-              <article class="card">
-                <h3>Installation</h3>
-                <p>Chaudières gaz, pompes à chaleur, radiateurs, planchers chauffants, régulation.</p>
-              </article>
-
-              <article class="card">
-                <h3>Dépannage</h3>
-                <p>Intervention sur pannes, fuites, circulateurs, brûleurs, thermostats.</p>
-              </article>
-
-              <article class="card">
-                <h3>Entretien</h3>
-                <p>Entretien annuel, réglages, désembouage, optimisation énergétique.</p>
-              </article>
-            </div>
-          </div>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-panel">
+        <div class="logo-card">
+          <img src="assets/logo.png" alt="Logo chauffagiste" />
+        </div>
+        <p class="eyebrow">Chauffage • Sanitaire • Climatisation • Énergies</p>
+        <h1>Le confort thermique, simplement.</h1>
+        <p class="lead">Installation, entretien et dépannage pour votre habitation. Une intervention claire, soignée et adaptée à vos besoins.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="tel:+32400000000">☎ Appeler maintenant</a>
+          <a class="btn btn-secondary" href="#contact">Demander un devis</a>
         </div>
       </div>
     </section>
 
-    <!-- BLOC 2 : DEMANDE -->
-    <section id="demande" class="section section--soft">
+    <section id="services" class="section services-section">
       <div class="container">
-        <div class="block">
-          <div class="block__head block__head--center">
-            <h2>Demande d’intervention</h2>
-            <p>Une demande claire et complète. Nous vous recontactons rapidement avec la meilleure option.</p>
-          </div>
-
-          <div class="block__body">
-            <form id="leadForm" class="form" novalidate>
-              <div class="form__grid">
-                <div class="field">
-                  <label for="type">Type d’intervention</label>
-                  <select id="type" name="type" required>
-                    <option value="">Choisir…</option>
-                    <option value="depannage">Dépannage</option>
-                    <option value="entretien">Entretien</option>
-                    <option value="installation">Installation / remplacement</option>
-                  </select>
-                </div>
-
-                <div class="field">
-                  <label for="systeme">Énergie / système</label>
-                  <select id="systeme" name="systeme" required>
-                    <option value="">Choisir…</option>
-                    <option value="gaz">Chaudière gaz</option>
-                    <option value="mazout">Chaudière mazout</option>
-                    <option value="pac">Pompe à chaleur</option>
-                    <option value="autre">Autre</option>
-                  </select>
-                </div>
-
-                <div class="field field--full" id="urgRow" hidden>
-                  <label for="urgence">Urgence</label>
-                  <select id="urgence" name="urgence">
-                    <option value="pas_urgent">Pas urgent</option>
-                    <option value="chauffage_ko">Plus de chauffage</option>
-                    <option value="eau_chaude_ko">Plus d’eau chaude</option>
-                    <option value="fuite">Fuite</option>
-                    <option value="odeur_gaz">Odeur de gaz</option>
-                  </select>
-                  <p class="hint">Si odeur de gaz : coupez l’arrivée et contactez immédiatement les urgences gaz.</p>
-                </div>
-
-                <div class="field">
-                  <label for="cp">Code postal</label>
-                  <input id="cp" name="cp" type="text" inputmode="numeric" placeholder="6700" required />
-                </div>
-
-                <div class="field">
-                  <label for="tel">Téléphone</label>
-                  <input id="tel" name="tel" type="tel" placeholder="+32 ..." required />
-                </div>
-
-                <div class="field field--full">
-                  <label for="email">E-mail</label>
-                  <input id="email" name="email" type="email" placeholder="nom@domaine.com" required />
-                </div>
-
-                <div class="field field--full">
-                  <label for="details">Détails</label>
-                  <textarea id="details" name="details" rows="5" placeholder="Symptômes, marque/modèle si connu, messages d’erreur…" required></textarea>
-                </div>
-              </div>
-
-              <div class="form__actions">
-                <button class="btn btn--primary" type="submit">Envoyer la demande</button>
-                <span id="formStatus" class="status" aria-live="polite"></span>
-              </div>
-            </form>
-          </div>
+        <div class="section-title">
+          <p class="eyebrow dark">Nos prestations</p>
+          <h2>Un seul contact pour votre confort.</h2>
+          <p>Les pictogrammes reprennent l’univers du logo : froid, feu, eau et soleil.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card snow">
+            <span class="icon">❄</span>
+            <h3>Climatisation</h3>
+            <p>Installation, mise en service et entretien de systèmes de climatisation.</p>
+          </article>
+          <article class="service-card fire">
+            <span class="icon">●</span>
+            <h3>Chauffage</h3>
+            <p>Chaudières, radiateurs, régulation, remplacement et optimisation.</p>
+          </article>
+          <article class="service-card water">
+            <span class="icon">●</span>
+            <h3>Sanitaire</h3>
+            <p>Eau chaude, fuites, raccordements, robinetterie et installations sanitaires.</p>
+          </article>
+          <article class="service-card sun">
+            <span class="icon">☀</span>
+            <h3>Énergies</h3>
+            <p>Solutions performantes orientées économies, confort et rendement.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- BLOC 3 : RDV + CONTACT (un seul ensemble) -->
-    <section id="rdv" class="section">
-      <div class="container">
-        <div class="block">
-          <div class="block__head block__head--center">
-            <h2>Rendez-vous & contact</h2>
-            <p>Réservez si ce n’est pas urgent. Pour une urgence, le téléphone reste le plus efficace.</p>
-          </div>
+    <section id="confiance" class="section trust-section">
+      <div class="container trust-layout">
+        <div>
+          <p class="eyebrow dark">Pourquoi choisir cet artisan ?</p>
+          <h2>Un site carte de visite, mais une image professionnelle.</h2>
+          <p>Le message est volontairement court : rassurer, expliquer le périmètre et inciter à appeler.</p>
+        </div>
+        <div class="trust-list">
+          <div><strong>01</strong><span>Devis clair et conseils adaptés</span></div>
+          <div><strong>02</strong><span>Travail propre et finitions soignées</span></div>
+          <div><strong>03</strong><span>Dépannage et entretien planifiés</span></div>
+        </div>
+      </div>
+    </section>
 
-          <div class="block__body">
-            <div class="split">
-              <div class="split__col">
-                <h3>Réserver un créneau</h3>
-                <p>Choisissez un créneau disponible.</p>
-                <div class="split__cta">
-                  <a class="btn btn--primary btn--wide" href="https://calendly.com/" target="_blank" rel="noopener">Réserver un créneau</a>
-                </div>
-              </div>
-
-              <div class="split__col split__col--divider">
-                <h3>Urgence / dépannage rapide</h3>
-                <p>Appelez directement pour une intervention urgente.</p>
-                <div class="split__cta">
-                  <a class="btn btn--dark btn--wide" href="tel:+32400000000">Appeler : +32 400 00 000</a>
-                </div>
-                <p class="hint">Si odeur de gaz : coupez l’arrivée et contactez les urgences gaz.</p>
-              </div>
-            </div>
-
-            <div class="block__footer">
-              <div class="info-line">
-                <span><strong>Zone :</strong> Arlon et environs</span>
-                <span><strong>Téléphone :</strong> <a href="tel:+32400000000">+32 400 00 000</a></span>
-                <span><strong>E-mail :</strong> <a href="mailto:contact@example.com">contact@example.com</a></span>
-              </div>
-
-              <div class="badges">
-                <span class="badge">Intervention 24/7</span>
-                <span class="badge">Certifié</span>
-                <span class="badge">Devis gratuit</span>
-              </div>
-            </div>
-
-          </div>
+    <section id="contact" class="section contact-section">
+      <div class="container contact-card">
+        <div>
+          <p class="eyebrow dark">Contact</p>
+          <h2>Besoin d’une intervention ou d’un devis ?</h2>
+          <p>Remplace simplement les coordonnées ci-dessous par celles de ton ami.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="contact-line" href="tel:+32400000000"><span>☎</span> +32 400 00 000</a>
+          <a class="contact-line" href="mailto:contact@example.com"><span>✉</span> contact@example.com</a>
+          <p class="contact-line"><span>📍</span> Arlon et environs</p>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <p>© 2026 Chauffagiste – Tous droits réservés.</p>
-      <nav class="footer__nav" aria-label="Navigation">
-        <a href="#services">Services</a>
-        <a href="#demande">Demande</a>
-        <a href="#rdv">Rendez-vous & contact</a>
-      </nav>
-    </div>
+  <footer>
+    <p>© 2026 Chauffagiste — Chauffage, sanitaire & climatisation.</p>
   </footer>
 
-  <script>
-    (function () {
-      const form = document.getElementById('leadForm');
-      const typeSel = document.getElementById('type');
-      const urgRow = document.getElementById('urgRow');
-      const statusEl = document.getElementById('formStatus');
-
-      function toggleUrgence() {
-        const show = typeSel.value === 'depannage';
-        urgRow.hidden = !show;
-        if (!show) {
-          const urg = document.getElementById('urgence');
-          if (urg) urg.value = 'pas_urgent';
-        }
-      }
-
-      typeSel.addEventListener('change', toggleUrgence);
-      toggleUrgence();
-
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        statusEl.textContent = "Envoi en cours…";
-
-        if (!form.checkValidity()) {
-          statusEl.textContent = "Veuillez compléter les champs requis.";
-          return;
-        }
-
-        const data = Object.fromEntries(new FormData(form).entries());
-
-        try {
-          const r = await fetch('/api/lead', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-          });
-
-          if (r.ok) {
-            statusEl.textContent = "Merci. Demande envoyée. Nous vous recontactons rapidement.";
-            form.reset();
-            toggleUrgence();
-          } else {
-            statusEl.textContent = "Erreur d’envoi. Essayez par téléphone ou réessayez plus tard.";
-          }
-        } catch (err) {
-          statusEl.textContent = "Erreur réseau. Essayez par téléphone ou réessayez plus tard.";
-        }
-      });
-    })();
-  </script>
+  <a class="mobile-call" href="tel:+32400000000">☎ Appeler</a>
 </body>
 </html>

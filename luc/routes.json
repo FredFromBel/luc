@@ -1,13 +1,5 @@
-
 {
   "routes": [
-    { "route": "/", "allowedRoles": ["anonymous"] }
-  ],
-  "navigationFallback": {
-    "rewrite": "/index.html",
-    "exclude": ["*.{png,jpg,jpeg,svg,css,js}"]
-  },
-  "responseOverrides": {
-    "404": { "rewrite": "/index.html", "statusCode": 200 }
-  }
+    { "route": "/*", "serve": "/index.html", "statusCode": 200 }
+  ]
 }
