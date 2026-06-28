@@ -1,2 +1,2 @@
 # luc
-Chauffage Luc B.
+Chauffage Luc
