@@ -5,90 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chauffage • Sanitaire • Climatisation • Énergies</title>
   <meta name="description" content="Installation, entretien et dépannage chauffage, sanitaire, climatisation et énergies. Une intervention claire, soignée et adaptée à vos besoins." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="nav-wrap">
-      <a class="brand" href="#top" aria-label="Accueil">
-        <img src="assets/logo.png" alt="Logo" />
-        <span>Chauffage <i></i> Sanitaire <b></b> Climatisation <em></em> Énergies</span>
-      </a>
-      <nav aria-label="Navigation principale">
-        <a href="#services">Services</a>
-        <a href="#engagements">Engagements</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="call call-top" href="tel:+32000000000">☎ Appeler</a>
-    </div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Accueil">
+      <img src="assets/logo.png" alt="Logo chauffagiste" />
+      <span>Chauffage <i></i> Sanitaire <i class="blue"></i> Climatisation <i class="green"></i> Énergies</span>
+    </a>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a href="#services">Services</a>
+      <a href="#engagements">Engagements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="call-header" href="tel:+32000000000">☎ Appeler</a>
   </header>
 
-  <main id="top">
+  <main>
     <section class="hero" aria-label="Présentation">
-      <div class="hero-card">
-        <h1>Le confort<br>thermique,<br><span>simplement.</span></h1>
-        <p>Installation, entretien et dépannage pour votre habitation.<br>Une intervention claire, soignée et adaptée à vos besoins.</p>
+      <div class="hero-panel">
+        <p class="eyebrow">Installation • entretien • dépannage</p>
+        <h1>Le confort thermique,<br><strong>simplement.</strong></h1>
+        <p class="hero-text">Installation, entretien et dépannage pour votre habitat. Une intervention claire, soignée et adaptée à vos besoins.</p>
         <div class="hero-actions">
           <a class="btn primary" href="tel:+32000000000">☎ Appeler maintenant</a>
           <a class="btn secondary" href="#contact">Demander un devis</a>
         </div>
       </div>
+
+      <div class="hero-photo" aria-hidden="true"></div>
+
+      <aside class="hero-services" aria-label="Services principaux">
+        <div class="mini-service fire"><span>🔥</span><div><b>Chauffage</b><p>Des solutions efficaces et économiques.</p></div></div>
+        <div class="mini-service water"><span>💧</span><div><b>Sanitaire</b><p>Des installations fiables et durables.</p></div></div>
+        <div class="mini-service cold"><span>❄️</span><div><b>Climatisation</b><p>Confort et fraîcheur en toutes saisons.</p></div></div>
+        <div class="mini-service sun"><span>☀️</span><div><b>Énergies</b><p>Des choix responsables pour l’avenir.</p></div></div>
+      </aside>
     </section>
 
     <section class="section services" id="services">
-      <p class="eyebrow">Nos métiers</p>
+      <p class="section-kicker">Nos métiers</p>
       <h2>Une prise en charge complète</h2>
       <div class="cards">
-        <article class="card">
-          <div class="icon cold">❄</div>
-          <h3>Climatisation</h3>
-          <p>Solutions discrètes pour rafraîchir et maintenir un confort optimal.</p>
-        </article>
-        <article class="card">
-          <div class="icon heat">🔥</div>
-          <h3>Chauffage</h3>
-          <p>Installation, remplacement, entretien et dépannage de vos équipements.</p>
-        </article>
-        <article class="card">
-          <div class="icon water">💧</div>
-          <h3>Sanitaire</h3>
-          <p>Interventions propres et fiables pour vos installations d’eau et sanitaires.</p>
-        </article>
-        <article class="card">
-          <div class="icon sun">☀</div>
-          <h3>Énergies</h3>
-          <p>Conseil et solutions orientées performance, économies et durabilité.</p>
-        </article>
+        <article class="card cold"><span class="icon">❄️</span><h3>Climatisation</h3><p>Solutions discrètes pour rafraîchir et maintenir un confort optimal.</p></article>
+        <article class="card fire"><span class="icon">🔥</span><h3>Chauffage</h3><p>Installation, remplacement, entretien et dépannage de vos équipements.</p></article>
+        <article class="card water"><span class="icon">💧</span><h3>Sanitaire</h3><p>Interventions propres et fiables pour vos installations d’eau et sanitaires.</p></article>
+        <article class="card sun"><span class="icon">☀️</span><h3>Énergies</h3><p>Conseil et solutions orientées performance, économies et durabilité.</p></article>
       </div>
     </section>
 
-    <section class="proof" id="engagements">
-      <div class="proof-item">
-        <span>✓</span>
-        <div><strong>Intervention rapide</strong><p>Dépannage et entretien réactifs</p></div>
-      </div>
-      <div class="proof-item">
-        <span>▿</span>
-        <div><strong>Travail soigné</strong><p>Des prestations fiables et durables</p></div>
-      </div>
-      <div class="proof-item">
-        <span>◖</span>
-        <div><strong>Conseils personnalisés</strong><p>Des solutions adaptées à votre habitation</p></div>
-      </div>
+    <section class="commitments" id="engagements" aria-label="Engagements">
+      <div class="commitment"><span>✓</span><div><b>Intervention rapide</b><p>Dépannage et entretien réactifs</p></div></div>
+      <div class="commitment"><span>▿</span><div><b>Travail soigné</b><p>Des prestations fiables et durables</p></div></div>
+      <div class="commitment"><span>◜</span><div><b>Conseils personnalisés</b><p>Des solutions adaptées à votre habitation</p></div></div>
     </section>
 
     <section class="contact" id="contact">
       <div>
-        <p class="eyebrow">Contact</p>
-        <h2>Un besoin, une question, un devis ?</h2>
-        <p>Remplace ici les coordonnées par celles de ton ami : téléphone, email, commune et zone d’intervention.</p>
+        <p class="section-kicker">Contact</p>
+        <h2>Parlons de votre projet</h2>
+        <p>Un besoin d’entretien, une panne ou un devis pour une installation ? Contactez-nous pour une réponse claire et rapide.</p>
       </div>
-      <div class="contact-panel">
-        <a class="btn primary" href="tel:+32000000000">☎ 00 00 00 00 00</a>
-        <a class="btn secondary" href="mailto:contact@example.be">contact@example.be</a>
+      <div class="contact-card">
+        <a href="tel:+32000000000">☎ +32 000 00 00 00</a>
+        <a href="mailto:contact@example.be">✉ contact@example.be</a>
+        <span>📍 Zone d’intervention à compléter</span>
       </div>
     </section>
   </main>
